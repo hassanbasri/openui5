@@ -1,14 +1,18 @@
 <mvc:View
 xmlns="sap.m"
 controllerName="controller.App"
+ xmlns:gmaps="openui5.googlemaps"
 xmlns:mvc="sap.ui.core.mvc"	>
-<Button text="say Hello"
-		press="onShowHello"
-	/>
-	<Input value="{/recipient/name}"
-			width="60%"
-			description="Hello {/recipient/name}"
-			valueLiveUpdate="false"
-	 />
-	
+
+					
+				
+					
+			
+				
+	<gmaps:Map height="500px" zoom="12" lat="-33.895" lng="151.275">
+        <gmaps:markers>
+            <gmaps:Marker lat="-33.895" lng="151.275" info="Bondi Beach" />
+        </gmaps:markers>
+    </gmaps:Map>
 </mvc:View>
+

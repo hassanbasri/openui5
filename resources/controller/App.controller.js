@@ -6,19 +6,25 @@ sap.ui.define(
 	"use strict";
 	return Controller.extend("controller.App", {
 		onInit:function  () {
+
+		
+
 			var oData = {
-				recipient : {
-					name : "World"
-				}
+				ProductCollection : [{
+				cat:"Name",
+				info:"found this on bed at \n 2015:1:25 11:08",
+				ProductPicUrl:"1.png"
+				}]
 			};
 
-			var oModel = new JSONModel(oData);
+			var oModel = new sap.ui.model.json.JSONModel();
+			oModel.loadData("http://users.aalto.fi/~hassanm1/mock.json");
+			
+
 			this.getView().setModel(oModel);
 
-		},
-		onShowHello:function(){
-			alert("Hello");
+			
 		}
-
+		
 	});
 });
